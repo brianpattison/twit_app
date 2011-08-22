@@ -1,0 +1,477 @@
+body {
+	background-color: #fff;
+	bottom: 0;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif !important;
+	font-size: 14px;
+	left: 0;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: none;
+}
+.sc-view {
+	margin: 0;
+	padding: 0;
+}
+/* iPhone Style Header */
+.header {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black), color-stop(0.02, #545454), color-stop(0.04, #3B3B3B), color-stop(0.5, #1D1D1D), color-stop(0.51, black));
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #333;
+	content: ' ';
+	height: 42px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	
+}
+.header h1 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	top: 6px;
+	white-space: nowrap;
+	width: 98%;
+}
+/* iPhone Style Header Buttons */
+.header .bp_button {
+	background-color: transparent;
+	border-width: 1px 5px 2px 5px;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 27px;
+	line-height: 27px;
+	margin: 7px 4px;
+	min-width: 30px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	white-space: nowrap;
+	z-index: 400;
+	-webkit-border-image: url('../images/buttons/button.png') 3 10 4 10 stretch stretch;
+}
+.header .bp_button.is-active {
+	-webkit-border-image: url('../images/buttons/button_active.png') 3 10 4 10 stretch stretch;
+}
+.header .bp_button.right {
+	padding: 0 6px;
+	right: 0;
+}
+.header .bp_button.back {
+	border-width: 1px 5px 2px 14px;
+	left: 0;
+	padding-right: 3px;
+	-webkit-border-image: url('../images/buttons/button_back.png') 3 10 4 28 stretch stretch;
+}
+.header .bp_button.back.is-active {
+	-webkit-border-image: url('../images/buttons/button_back_active.png') 3 10 4 28 stretch stretch;
+}
+.header.has_short_header.has_short_back_button h1, .header.has_short_header.has_right_button h1 {
+	left: 0;
+	max-width: 55%;
+	right: 0;
+	text-align: center;
+}
+.header.has_short_header.has_short_back_button .bp_button, .header.has_short_header.has_right_button .bp_button {
+	max-width: 20%;
+}
+.header.has_long_back_button h1 {
+	left: 40%;
+	max-width: 55%;
+	right: 100%;
+	text-align: left;
+}
+.header.has_long_back_button .bp_button {
+	max-width: 30%;
+}
+header.has_two_buttons h1 {
+	left: 0;
+	max-width: 55%;
+	right: 0;
+	text-align: center;
+}
+header.has_two_buttons .bp_button {
+	max-width: 16%;
+}
+
+.header.has_long_header .has_short_back_button h1 {
+	left: 26%;
+	max-width: 74%;
+	right: 100%;
+	text-align: left;
+}
+.header.has_long_header .has_short_back_button .bp_button {
+	max-width: 20%;
+}
+.header.has_long_back_button h1 {
+	left: 29%;
+	max-width: 71%;
+	right: 100%;
+	text-align: left;
+}
+.header.has_long_back_button .bp_button {
+	min-width: 16%;
+	max-width: 20%;
+}
+.header.has_right_button h1 {
+	right: 26%;
+	max-width: 74%;
+	left: 0%;
+	text-align: right;
+}
+.header.has_right_button .bp_button {
+	max-width: 20%;
+}
+.header.has_two_buttons h1 {
+	left: 0;
+	max-width: 55%;
+	right: 0;
+	text-align: center;
+}
+.header.has_two_buttons .bp_button {
+	max-width: 14%;
+}
+
+/* Tab Window Content */
+.content {
+	background-color: #fff;
+	bottom: 48px;
+	left: 0;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	position: absolute; 
+	right: 0;
+	top: 44px;
+}
+.content > div {
+	background-color: #fff;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	width: 100%;
+}
+.content > div .scroller {
+	min-height: 100%;
+	position: absolute;
+	width: 100%;
+}
+/* jQuery Mobile Style Headings/Dividers */
+.content h2 {
+	background-color: #222;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #666),color-stop(1, #222));
+	border-bottom: 1px solid #2a2a2a;
+	border-top: 1px solid #2a2a2a;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+	padding: 0 10px;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+.content h2 .bubble {
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #666),color-stop(1, #222));
+	border: 1px solid #2a2a2a;
+	border-radius: 12px;
+	float: right;
+	font-size: 12px;
+	height: 16px;
+	line-height: 14px;
+	margin: 6px 0 0 0;
+	padding: 0 6px;
+}
+.content h2.blue {
+	background-color: #5e87b0;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#81a8ce),color-stop(1,#5e87b0));
+	border-bottom: 1px solid #456f9a;
+	border-top: 1px solid #456f9a;
+}
+.content h2.blue .bubble {
+	background-color: #5e87b0;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,#81a8ce),color-stop(1,#5e87b0));
+	border-color: #456f9a;
+}
+/* Button Styles */
+.content .bp_button {
+	background: #111 url('../images/button_overlay.png') repeat-x;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: normal;
+	padding: 6px 15px 7px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	-webkit-border-radius: 18px;
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+.content .bp_button.is-active {
+	background: #333;
+	-webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,1);
+}
+
+/* iPhone Style Transitions */
+.header .slide {
+	bottom: 0;
+	left: 0;
+	opacity: 1.0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	-webkit-transform: translate(0, 0);
+	-webkit-transition-duration: 350ms;
+	-webkit-transition-property: all;
+    -webkit-transition-timing-function: ease-in-out;
+}
+.header.next .slide {
+	opacity: 0;
+	z-index: 5;
+	-webkit-transform: translate(100%, 0);
+}
+.header.previous .slide {
+	opacity: 0;
+	z-index: 5;
+	-webkit-transform: translate(-100%, 0);
+}
+.header .fade {
+	bottom: 0;
+	opacity: 1.0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%;
+	z-index: 10;
+	-webkit-transition-duration: 350ms;
+	-webkit-transition-property: opacity;
+    -webkit-transition-timing-function: ease-in-out;
+}
+.header.next .fade, .header.previous .fade {
+	opacity: 0;
+	z-index: 5;
+}
+.content {
+	z-index: 10;
+	-webkit-transform: translate(0, 0);
+	-webkit-transition-duration: 350ms;
+	-webkit-transition-property: -webkit-transform;
+    -webkit-transition-timing-function: ease-in-out;
+}
+.content.next {
+	z-index: 5;
+	-webkit-transform: translate(100%, 0);
+}
+.content.previous {
+	z-index: 5;
+	-webkit-transform: translate(-100%, 0);
+}
+
+/* iPhone Style Tabs */
+.tabs {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black), color-stop(0.02, #545454), color-stop(0.04, #3B3B3B), color-stop(0.5, #1D1D1D), color-stop(0.51, black));
+	bottom: 0;
+	height: 48px;
+	left: 0;
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+.tabs li {
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: bold;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-align: center;
+	text-shadow: 0 1px 1px #000;
+}
+.tabs li.tabs_2 { width: 50%; }
+.tabs li.tabs_3 { width: 33%; }
+.tabs li.tabs_4 { width: 25%; }
+.tabs li.tabs_5 { width: 20%; }
+.tabs button {
+	background: transparent;
+	border: 0;
+	display: block;
+	height: 42px;
+	margin: 3px auto;
+	position: relative;
+	width: 98%;
+}
+.tabs button::-moz-focus-inner { 
+    border: 0;
+    padding: 0;
+}
+.tabs button span {
+	bottom: 1px;
+	color: #7D7D7D;
+	overflow: hidden;
+	position: absolute;
+	text-decoration: none;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+.tabs button.active {
+	background: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+	-webkit-border-radius: 3px;
+}
+.tabs button.active span {
+	color: #fff;
+}
+/* Tab Icons*/
+.tabs button span::before {
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ccc), to(#333));
+	content: ' ';
+	display: block;
+	height: 24px;
+	margin: 1px auto 2px auto;
+	overflow: hidden;
+	position: relative;
+	width: 24px;
+	z-index: 0;
+	-webkit-mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 24px 24px;
+}
+.tabs button.active span::before {
+	background-image: -webkit-gradient(linear, 38% 0%, 60% 70%, from(#dde9f0), to(#3fc5f8), color-stop(.6,#79b2ec),color-stop(.7,#2e91e5));
+	z-index: 1;
+}
+.tabs button.twit span::before {
+	-webkit-mask-image: url('../images/twit.png');
+}
+.tabs button.tv span::before {
+	-webkit-mask-image: url('../images/tv.png');
+}
+
+
+/* TWiT App Specific Styles */
+audio, video {
+	-webkit-transform: translate(-1000px, 0);
+	z-index: 1000;
+}
+video {
+	height: 100%;
+	width: 100%;
+}
+video.playing {
+	-webkit-transform: translate(0, 0);
+}
+#live_buttons {
+	margin: 0 auto;
+	width: 320px;
+}
+#live_buttons .bp_button {
+	margin: 20px 10px;
+	padding-left: 0;
+	padding-right: 0;
+	width: 138px;
+}
+#calendar_touch_receiver {
+	height: 1000px;
+	position: absolute;
+	width: 100%;
+}
+#netcast_list {
+	border-top: 1px solid #e0e0e0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#netcast_list li {
+	border-bottom: 1px solid #e0e0e0;
+	display: block;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#netcast_list li .bp_list_item {
+	background-color: #fff;
+	background-image: url('../images/arrow.png');
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	background-size: 20px 13px;
+	border: none;
+	color: #000;
+	cursor: pointer;
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	height: 40px;
+	line-height: 40px;
+	padding: 10px;
+	text-align: left;
+	width: 100%;
+}
+#netcast_list li .bp_list_item.is-active {
+	background-color: #0b7ac3;
+	background-image: url('../images/arrow_active.png');
+	color: #fff;
+}
+#netcast_list li .bp_list_item img {
+	float: left;
+	margin-right: 10px;
+	height: 40px;
+	width: 40px;
+}
+#netcast_list li .bp_list_item .title {
+	display: block;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 82%;
+}
+#episode_list {
+	border-top: 1px solid #e0e0e0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+#episode_list li {
+	border-bottom: 1px solid #e0e0e0;
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0;
+	padding: 10px;
+	position: relative;
+}
