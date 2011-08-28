@@ -507,10 +507,27 @@ video.playing {
 	padding-right: 0;
 	width: 138px;
 }
-#calendar_touch_receiver {
-	height: 1000px;
-	position: absolute;
-	width: 100%;
+#events_list {
+	border-top: 1px solid #e0e0e0;
+}
+#events_list li {
+	border-bottom: 1px solid #e0e0e0;
+	display: block;
+	margin: 0;
+	padding: 10px;
+}
+#events_list .time {
+	color: #0b7ac3;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	width: 70px;
+}
+#events_list .title {
+	color: 000;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
 }
 #netcast_list {
 	border-top: 1px solid #e0e0e0;

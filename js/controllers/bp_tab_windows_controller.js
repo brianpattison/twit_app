@@ -29,25 +29,35 @@ BP.tabWindowsController = SC.ArrayProxy.create({
 	
 	// Open a new window with the tab
 	open: function(options) {
-		var activeWindow = this.get('activeWindow');
-		var nextWindow = this.get('nextWindow');
+		var activeWindow = this.get('activeWindow'),
+			nextWindow = this.get('nextWindow'),
+			openedWindow;
 		// Switch out the contents if switching tabs
 		if (options.openTab)
 		{
-			activeWindow.set('title', options.title);
-			activeWindow.set('view', options.view);
+			openedWindow = activeWindow;
 		}
 		// Perform the transition if opening within a tab
 		else
 		{
-			nextWindow.set('backText', activeWindow.get('title'));
-			nextWindow.set('title', options.title);
-			nextWindow.set('view', options.view);
+			options.backText = activeWindow.get('title');
 			activeWindow.set('previous', YES);
 			nextWindow.set('next', NO);
-			// Set the current tab's window options to the new window for switching between tabs
-			BP.tabsController.get('activeTab').set('windowOptions', options);
+			openedWindow = nextWindow;
 		}
+		// Setup the new window
+		openedWindow.set('backText', options.backText);
+		openedWindow.set('onLoad', options.onLoad);
+		openedWindow.set('title', options.title);
+		openedWindow.set('view', options.view);
+		
+		// Set the current tab's window options to the new window for switching between tabs
+		BP.tabsController.get('activeTab').set('windowOptions', options);
+		
+		// Perform any action assigned to opening this window
+		if (openedWindow.onLoad) openedWindow.onLoad();
+		
+		// Refresh iScroll objects to reflect new window height
 		BP.tabWindowsController.refreshScrollers();
 	},
 	
@@ -72,6 +82,7 @@ BP.tabWindowsController = SC.ArrayProxy.create({
 		// Try again if the elements aren't ready
 		if (!setupComplete) setTimeout(BP.tabWindowsController.setupScrollers, 100);
 	}
+
 });
 
 BP.tabWindowsController.set('content', [

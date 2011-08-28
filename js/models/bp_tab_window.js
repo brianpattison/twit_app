@@ -1,10 +1,13 @@
 BP.TabWindow = SC.Object.extend({
+	action: null,
 	backText: null,
 	previous: NO,
 	next: NO,
+	onLoad: null,
 	rightButtonView: null,
 	scroller: null,
 	scrollerId: null,
+	target: null,
 	title: null,
 	view: null,
 	
