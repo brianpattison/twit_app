@@ -4,7 +4,7 @@ Twit.netcastsController = SC.ArrayProxy.create({
 	
 	loadEpisodes: function() {
 		var netcast = Twit.netcastsController.get('current');
-		$.get(netcast.get('feed'), function(xml) {
+		$.get(netcast.get('feedUrl'), function(xml) {
 			var episodes = [];
 			$(xml).find('item').each(function() {
 				var $this = $(this);

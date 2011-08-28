@@ -5,6 +5,7 @@ Twit.Netcast = SC.Object.extend({
 	title: null,
 	
 	feedUrl: function() {
+		console.log(this.get('feed').replace('http://', '/_strobe/proxy/'));
 		if (window.location.host == '')
 			return this.get('feed');
 		else
