@@ -11,7 +11,7 @@ Most things work, but it is definitely not complete! Not enough time! :)
 
 Here's the app running on Strobe's beta platform. Add it to your home screen on your iOS device!
 
-<http://twitapp.strobe.com>
+<http://twitapp.strobeapp.com/>
 
 ## Known Issues
 
