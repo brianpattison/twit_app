@@ -51,7 +51,7 @@ body {
 .header .bp_button {
 	background-color: #212121;
 	border: none;
-	border-bottom: 1px solid rgba(255,255,255,0.3);
+	border-bottom: 1px solid rgba(255,255,255,0.2);
 	border-radius: 4px;
 	box-sizing: border-box;
 	color: #fff;
@@ -127,7 +127,7 @@ body {
 		color-stop(1,#212121)
 	);
 	border-top: 1px solid #1f1f1f;
-	border-left: 1px solid rgba(255,255,255,0.3);
+	border-left: 1px solid rgba(255,255,255,0.2);
   	border-radius: 0 6px 0 3px;
 	height: 22px;
 	width: 24px;
